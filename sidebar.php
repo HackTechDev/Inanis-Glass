@@ -8,12 +8,17 @@ if (!empty($_SERVER['SCRIPT_FILENAME']) && 'sidebar.php' == basename($_SERVER['S
     <div class="bpt"><img src="<?php bloginfo('template_directory'); ?>/images/1pxtrans.gif" alt=" " /></div>
     <div class="bpm">
 	<div id="bp">
+		<!--
 		<img src="<?php bloginfo('template_directory'); ?>/images/1pxtrans.gif" alt=" " />
+		-->
       			<?php 	
+				/*
 				global $userdata;
       				get_currentuserinfo();
       				echo get_avatar( $userdata->ID, 46 ); 
+				*/
 			?>
+		<img src="http://steamcyberpunk.net/wp-content/themes/inanis-glass/images/blogphoto.png" width="105px" height="90px">	
 	</div>
 	</div>
     <div class="bpb"><img src="<?php bloginfo('template_directory'); ?>/images/1pxtrans.gif" alt=" " /></div>
@@ -22,29 +27,29 @@ if (!empty($_SERVER['SCRIPT_FILENAME']) && 'sidebar.php' == basename($_SERVER['S
   <?php /* Single */ if(is_single() && !is_attachment()) { ?>
   <div class="sidebar-top"><img src="<?php bloginfo('template_directory'); ?>/images/1pxtrans.gif" alt=" " /></div>
   <div class="sidebar-mid">
-    <h3><?php _e('About this Post','inanis');?></h3>    
+    <h3><?php _e('Article','inanis');?></h3>    
     <?php rewind_posts(); ?>
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-    <p>&raquo; <b><?php _e('Title','inanis');?>:</b> <a href="<?php the_permalink() ?>" title="<?php _e('Permanent Link','inanis');?>: <?php the_title(); ?>"><?php the_title(); ?></a><br />&raquo; <b><?php _e('Posted','inanis');?>:</b> <?php the_time('F jS, Y'); ?><br />&raquo; <b><?php _e('Author','inanis');?>:</b> <?php the_author_posts_link(); ?><br />&raquo; <b><?php _e('Filed Under','inanis');?>:</b> <?php the_category(',') ?>.</p>
+    <p>&raquo; <b><?php _e('Titre','inanis');?>:</b> <a href="<?php the_permalink() ?>" title="<?php _e('Lien Permanent','inanis');?>: <?php the_title(); ?>"><?php the_title(); ?></a><br />&raquo; <b><?php _e('Ecrit','inanis');?>:</b> <?php the_time('F jS, Y'); ?><br />&raquo; <b><?php _e('Auteur','inanis');?>:</b> <?php the_author_posts_link(); ?><br />&raquo; <b><?php _e('Cat&eacute;gories','inanis');?>:</b> <?php the_category(',') ?>.</p>
     <?php endwhile; endif; ?>
     <?php rewind_posts(); ?>
     <?php if (('open' == $post-> comment_status) && ('open' == $post->ping_status)) {
     
     // Both Comments and Pings are open ?>
-    <p><?php comments_number('&raquo; '.__('There are no responses','inanis'),'&raquo; '.__('There is one response','inanis'),'&raquo; '.__('There are % responses','inanis')); ?>.</p>
-    <p>&raquo;  <a href="#comments"><?php _e('Read comments','inanis');?></a>, <a href="#post"><?php _e('respond','inanis');?></a> <?php _e('or follow responses via','inanis');?> <?php comments_rss_link(__("RSS",'inanis')); ?>.</p>
+    <p><?php comments_number('&raquo; '.__('Aucune r&eacute;sponses','inanis'),'&raquo; '.__('Une r&eacute;ponse','inanis'),'&raquo; '.__('% r&eacute;ponses','inanis')); ?>.</p>
+    <p>&raquo;  <a href="#comments"><?php _e('Lire Commentaire','inanis');?></a>, <a href="#post"><?php _e('r&eacute;pondre','inanis');?></a> <?php _e('ou suivre les r&eacute;ponse via','inanis');?> <?php comments_rss_link(__("RSS",'inanis')); ?>.</p>
     <p><span id="trackback">&raquo; 
-    <a href="<?php trackback_url() ?>" title="<?php _e('Copy this URI to trackback this entry.','inanis');?>" rel="nofollow"><?php _e('Trackback this entry','inanis');?>.</a></span></p>
+    <a href="<?php trackback_url() ?>" title="<?php _e('Copy this URI to trackback this entry.','inanis');?>" rel="nofollow"><?php _e('Trackback Article','inanis');?>.</a></span></p>
     <?php } elseif (!('open' == $post-> comment_status) && ('open' == $post->ping_status)) {
     
     // Only Pings are Open ?>
     <p><span id="trackback">
-    <a href="<?php trackback_url() ?>" title="<?php _e('Copy this URI to trackback this entry.','inanis');?>" rel="nofollow"><?php _e('Trackback this entry','inanis');?>.</a></span></p>
+    <a href="<?php trackback_url() ?>" title="<?php _e('Copy this URI to trackback this entry.','inanis');?>" rel="nofollow"><?php _e('Trackback Article','inanis');?>.</a></span></p>
     <?php } elseif (('open' == $post-> comment_status) && !('open' == $post->ping_status)) {
     
     // Comments are open, Pings are not ?>
     <p><?php comments_number('&raquo; '.__('There are no responses','inanis'),'&raquo; '.__('There is one response','inanis'),'&raquo; '.__('There are % responses','inanis')); ?>.</p>
-    <p>&raquo;  <a href="#comments"><?php _e('Read comments','inanis');?></a>, <a href="#post"><?php _e('respond','inanis');?></a> <?php _e('or follow responses via','inanis');?> <?php comments_rss_link(__("RSS",'inanis')); ?>.</p>
+    <p>&raquo;  <a href="#comments"><?php _e('Lire Commentaires','inanis');?></a>, <a href="#post"><?php _e('r&eacure;pondre','inanis');?></a> <?php _e('or follow responses via','inanis');?> <?php comments_rss_link(__("RSS",'inanis')); ?>.</p>
     <?php } elseif (!('open' == $post-> comment_status) && !('open' == $post->ping_status)) {
     // Neither Comments, nor Pings are open ?>
   <?php } ?>
@@ -69,7 +74,7 @@ if (!empty($_SERVER['SCRIPT_FILENAME']) && 'sidebar.php' == basename($_SERVER['S
     <h3><?php _e('Attachment...','inanis');?></h3>    
     <?php rewind_posts(); ?>
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-    <p>&raquo; <b><?php _e('Title','inanis');?>:</b> <a href="<?php the_permalink() ?>" title="<?php _e('Permanent Link','inanis');?>: <?php the_title(); ?>"><?php the_title(); ?></a><br />&raquo; <b><?php _e('Posted','inanis');?>:</b> <?php the_time('F jS, Y'); ?><br />&raquo; <b><?php _e('Author','inanis');?>:</b> <?php the_author_posts_link(); ?><br /></p>
+    <p>&raquo; <b><?php _e('Titre','inanis');?>:</b> <a href="<?php the_permalink() ?>" title="<?php _e('Permanent Link','inanis');?>: <?php the_title(); ?>"><?php the_title(); ?></a><br />&raquo; <b><?php _e('Posted','inanis');?>:</b> <?php the_time('F jS, Y'); ?><br />&raquo; <b><?php _e('Author','inanis');?>:</b> <?php the_author_posts_link(); ?><br /></p>
     <?php endwhile; endif; ?>
   </div>
   <div class="sidebar-bottom"><img src="<?php bloginfo('template_directory'); ?>/images/1pxtrans.gif" alt=" " /></div>

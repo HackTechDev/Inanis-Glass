@@ -11,31 +11,31 @@ if (!empty($_SERVER['SCRIPT_FILENAME']) && 'footer.php' == basename($_SERVER['SC
       <ul>
         <li id="SMCatsB">
           <img src="<?php bloginfo('template_directory'); ?>/images/categories_32.png" alt=" " />
-          <b><?php _e('Categories','inanis');?></b><br />
-          <?php _e('Show category details...','inanis');?>
+          <b><?php _e('Catégories','inanis');?></b><br />
+          <?php _e('Afficher D&eacute;tails Cat&eacute;gories','inanis');?>
         </li>
         <li id="SMTagsB">
           <img src="<?php bloginfo('template_directory'); ?>/images/tags_32.png" alt=" " />
-          <b><?php _e('Tag Cloud','inanis');?></b><br />
-          <?php _e('Show the Tag Cloud...','inanis');?>
+          <b><?php _e('Nuage Balises','inanis');?></b><br />
+          <?php _e('Afficher Nuage Balises','inanis');?>
         </li>
         <li>
           <a href="<?php bloginfo('atom_url'); ?>">
           <img src="<?php bloginfo('template_directory'); ?>/images/feed_32.png" alt=" " />
           <b><?php _e('Blog RSS','inanis');?></b><br />
-          <?php _e('Follow the Blog RSS...','inanis');?>
+          <?php _e('Suivre Blog RSS...','inanis');?>
           </a>
         </li>
         <li>
           <a href="<?php bloginfo('comments_rss2_url'); ?>">
           <img src="<?php bloginfo('template_directory'); ?>/images/comments_32.png" alt=" " />
-          <b><?php _e('Comments RSS','inanis');?></b><br />
-          <?php _e('Follow the Comments RSS...','inanis');?>
+          <b><?php _e('Commentaire RSS','inanis');?></b><br />
+          <?php _e('Suivre Commentaires RSS','inanis');?>
           </a>
         </li>
       </ul>
       <div class="SMsgbhr"><img src="<?php bloginfo('template_directory'); ?>/images/smhrlt.png" alt=" " /></div>
-      <div class="SMsgb" id="SMLpostsB"><img src="<?php bloginfo('template_directory'); ?>/images/smfwd.png" alt=" " /><?php _e('Last 50 Posts','inanis');?></div>
+      <div class="SMsgb" id="SMLpostsB"><img src="<?php bloginfo('template_directory'); ?>/images/smfwd.png" alt=" " /><?php _e('50 derniers articles','inanis');?></div>
       <div id="SMSearchForm"><?php include (TEMPLATEPATH . '/sm_searchform.php'); ?></div>
     </div>
     
@@ -53,7 +53,7 @@ if (!empty($_SERVER['SCRIPT_FILENAME']) && 'footer.php' == basename($_SERVER['SC
             <?php wp_tag_cloud('number=30'); ?>
           </div>
         <div class="SMsgbhr"><img src="<?php bloginfo('template_directory'); ?>/images/smhrlt.png" alt=" " /></div>
-        <div class="SMsgb" id="SMTagsK"><img src="<?php bloginfo('template_directory'); ?>/images/smback.png" alt=" " /><?php _e('Back','inanis');?></div>
+        <div class="SMsgb" id="SMTagsK"><img src="<?php bloginfo('template_directory'); ?>/images/smback.png" alt=" " /><?php _e('Retour','inanis');?></div>
       </div>
     </div>
     
@@ -61,7 +61,7 @@ if (!empty($_SERVER['SCRIPT_FILENAME']) && 'footer.php' == basename($_SERVER['SC
       <div class="SMSubDiv SMap">
           <ul><?php wp_get_archives('type=postbypost&limit=50'); ?></ul>
         <div class="SMsgbhr"><img src="<?php bloginfo('template_directory'); ?>/images/smhrlt.png" alt=" " /></div>
-        <div class="SMsgb" id="SMLpostsK"><img src="<?php bloginfo('template_directory'); ?>/images/smback.png" alt=" " /><?php _e('Back','inanis');?></div>
+        <div class="SMsgb" id="SMLpostsK"><img src="<?php bloginfo('template_directory'); ?>/images/smback.png" alt=" " /><?php _e('Retour','inanis');?></div>
       </div>
     </div>
         
@@ -89,9 +89,9 @@ if (!empty($_SERVER['SCRIPT_FILENAME']) && 'footer.php' == basename($_SERVER['SC
       echo '<div class="SMRtDiv">';
       ?><img class="SMSep" src="<?php bloginfo('template_directory'); ?>/images/sm-sep.png" alt=" " /><?php
       if ($role=="administrator" || $role=="editor" || $role=="author")
-        { echo ('<a class="SMRtHov" href="' . get_option('siteurl') . '/wp-admin/post-new.php" title="'.__('Write a Post','inanis').'">'.__('Write a Post','inanis').'</a>'); }
+        { echo ('<a class="SMRtHov" href="' . get_option('siteurl') . '/wp-admin/post-new.php" title="'.__('Ecrire Article','inanis').'">'.__('Ecrire Article','inanis').'</a>'); }
       if ($role=="administrator" || $role=="editor")
-        { echo ('<a class="SMRtHov" href="' . get_option('siteurl') . '/wp-admin/page-new.php" title="'.__('Write a Page','inanis').'">'.__('Write a Page','inanis').'</a>'); }
+        { echo ('<a class="SMRtHov" href="' . get_option('siteurl') . '/wp-admin/page-new.php" title="'.__('Ecrire Page','inanis').'">'.__('Ecrire Page','inanis').'</a>'); }
       ?><img class="SMSep" src="<?php bloginfo('template_directory'); ?>/images/sm-sep.png" alt=" " /><?php
       echo '</div>';
        ?>
@@ -105,17 +105,17 @@ if (!empty($_SERVER['SCRIPT_FILENAME']) && 'footer.php' == basename($_SERVER['SC
         if ($role!="subscriber")
           {
             $adminbtn1='<a class="SMRtHov" href="';
-            $adminbtn2='/wp-admin/" title="'.__('Site Admin','inanis').'"><span>'.__('Site Admin','inanis').'</span></a>';
+            $adminbtn2='/wp-admin/" title="'.__('Administration','inanis').'"><span>'.__('Administration','inanis').'</span></a>';
           }
         else
           {
             $adminbtn1='<a class="SMRtHov" href="';
-            $adminbtn2='/wp-admin/" title="'.__('Edit Your Profile','inanis').'"><span>'.__('Edit Your Profile','inanis').'</span></a>';
+            $adminbtn2='/wp-admin/" title="'.__('Edition Profile','inanis').'"><span>'.__('Edition Profile','inanis').'</span></a>';
           } 
           
       } else {
         $adminbtn1='<a class="SMRtHov" href="';
-        $adminbtn2='/wp-login.php?action=register" title="'.__('Register an account','inanis').'"><span>'.__('Register an account','inanis').'</span></a>';
+        $adminbtn2='/wp-login.php?action=register" title="'.__('Enregistement Compte','inanis').'"><span>'.__('Enregistement Compte','inanis').'</span></a>';
       } 
     ?>
       
@@ -123,7 +123,7 @@ if (!empty($_SERVER['SCRIPT_FILENAME']) && 'footer.php' == basename($_SERVER['SC
         <?php echo $adminbtn1;echo get_option('siteurl');echo $adminbtn2;?>
       </div>
       
-      <div class="SMRtPoCom" id="SMThemeB"><?php _e('Change Theme...','inanis');?></div>
+      <div class="SMRtPoCom" id="SMThemeB"><?php _e('Changer Th&egrave;me...','inanis');?></div>
       
       <div class="liload">
       
@@ -239,7 +239,7 @@ if (!empty($_SERVER['SCRIPT_FILENAME']) && 'footer.php' == basename($_SERVER['SC
         <div class="menu-sep"><img src="<?php bloginfo('template_directory'); ?>/images/1pxtrans.gif" alt=" " /></div>
         <?php insert_quicklaunch(); ?>       
         <div class="nav"><ul>
-        <li<?php if (is_home()){?> class="current_page_item_tb" <?php } ?>><a href="<?php echo get_settings('home'); ?>/"><?php _e('Home','inanis');?></a></li>
+        <li<?php if (is_home()){?> class="current_page_item_tb" <?php } ?>><a href="<?php echo get_settings('home'); ?>/"><?php _e('Accueil','inanis');?></a></li>
         <?php 
           global $baby, $matches;
           insert_menu();

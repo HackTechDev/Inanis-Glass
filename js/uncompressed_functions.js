@@ -661,7 +661,7 @@ function InitPageEvents(){
       // Set Searchboxes to "Start Search" on page load, and set handlers for focus and blur
       $( ".search" ).each(  
          function(){
-           $( this ).val("Start Search");
+           $( this ).val("Recherche");
            $( this ).bind ("focus",function(){SearchBoxFocus(this);});
            $( this ).bind ("blur",function(){SearchBoxBlur(this);});
          }

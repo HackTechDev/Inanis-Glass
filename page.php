@@ -33,15 +33,15 @@ if (!empty($_SERVER['SCRIPT_FILENAME']) && 'page.php' == basename($_SERVER['SCRI
             <div class="win_info">
               <div class="win_infot"></div>
               <div class="win_infod">
-                <a rel="nofollow" href="mailto:?subject=<?php the_title(); ?>&amp;body=<?php _e('I thought you might like this','inanis'); ?>: <?php the_permalink() ?>"><?php _e('Email','inanis');?></a> &bull; 
-                <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e('Permanent Link to','inanis');?> <?php the_title(); ?>"><?php _e('Permalink','inanis') ?></a> 
+                <a rel="nofollow" href="mailto:?subject=<?php the_title(); ?>&amp;body=<?php _e('J\'ai pens&eacute; que vous devriez aim&eacute; ceci','inanis'); ?>: <?php the_permalink() ?>"><?php _e('Courriel','inanis');?></a> &bull; 
+                <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e('Lien Permanent vers','inanis');?> <?php the_title(); ?>"><?php _e('Permalien','inanis') ?></a> 
                 
               </div> 
               <img class="win_infoi" src="<?php bloginfo('template_directory'); ?>/images/question.png" alt="Info" />
               <div class="win_infoc">
-                <strong><?php _e('Date Posted','inanis');?>:</strong> <?php the_time('d M Y') ?> @ <?php echo $PostTime; ?><br />
-                <strong><?php _e('Last Modified','inanis');?>:</strong> <?php the_modified_date('d M Y'); ?> @ <?php echo $Post_Modified; ?><br />
-                <strong><?php _e('Posted By','inanis');?>:</strong> <?php the_author() ?><br />
+                <strong><?php _e('Date Cr&eacute;ation','inanis');?>:</strong> <?php the_time('d M Y') ?> @ <?php echo $PostTime; ?><br />
+                <strong><?php _e('Derni&eacute;re Modification','inanis');?>:</strong> <?php the_modified_date('d M Y'); ?> @ <?php echo $Post_Modified; ?><br />
+                <strong><?php _e('Post&eacute; par','inanis');?>:</strong> <?php the_author() ?><br />
               </div>
             </div>
           </div> 

@@ -12,7 +12,7 @@ if (!empty($_SERVER['SCRIPT_FILENAME']) && 'single.php' == basename($_SERVER['SC
         <div class="win_tl"></div><div class="win_t"></div><div class="win_tr"></div><div class="win_bl"></div><div class="win_b"></div><div class="win_br"></div><div class="win_r"></div><div class="win_l"></div>
         <div class="win_title"><span class="win_tbl">&nbsp;</span><h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3><span class="win_tbr">&nbsp;</span></div>
         <div class="win_ted">
-          <div class="win_edt"><?php edit_post_link(__('edit','inanis'),'[ ',' ] '); ?></div>
+          <div class="win_edt"><?php edit_post_link(__('Edition','inanis'),'[ ',' ] '); ?></div>
           <div class="win_pd">
             <span class="win_tbl">&nbsp;</span><span class="win_tb"><?php the_time('d M Y') ?> @ <?php echo $PostTime; ?></span><span class="win_tbr">&nbsp;</span>
           </div>
@@ -32,15 +32,15 @@ if (!empty($_SERVER['SCRIPT_FILENAME']) && 'single.php' == basename($_SERVER['SC
             <div class="win_info">
               <div class="win_infot"></div>
               <div class="win_infod">
-                <strong><?php _e('Posted By:','inanis');?></strong> <?php the_author() ?><br />
-                <strong><?php _e('Last Edit:','inanis');?></strong> <?php the_modified_date('d M Y'); ?> @ <?php echo $Post_Modified; ?><br /><br />
-                <a rel="nofollow" href="mailto:?subject=<?php the_title(); ?>&amp;body=<?php _e('I thought you might like this','inanis'); ?>: <?php the_permalink() ?>"><?php _e('Email','inanis');?></a> &bull; 
-                <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e('Permanent Link to','inanis');?> <?php the_title(); ?>"><?php _e('Permalink','inanis') ?></a>
+                <strong><?php _e('Ecrit par :','inanis');?></strong> <?php the_author() ?><br />
+                <strong><?php _e('Derni&egrave;re Edition :','inanis');?></strong> <?php the_modified_date('d M Y'); ?> &agrave; <?php echo $Post_Modified; ?><br /><br />
+                <a rel="nofollow" href="mailto:?subject=<?php the_title(); ?>&amp;body=<?php _e('I thought you might like this','inanis'); ?>: <?php the_permalink() ?>"><?php _e('Courriel','inanis');?></a> &bull; 
+                <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e('Lien Permanent vers','inanis');?> <?php the_title(); ?>"><?php _e('Permalien','inanis') ?></a>
               </div> 
               <img class="win_infoi" src="<?php bloginfo('template_directory'); ?>/images/tags_50.png" alt="Tags" />
               <div class="win_infoc">
-                 <?php the_tags('<strong>'.__('Tags','inanis').': </strong>', ', ', '<br />'); ?>
-                 <strong><?php _e('Categories','inanis');?>:</strong> <?php the_category(', ') ?>
+                 <?php the_tags('<strong>'.__('Balises','inanis').': </strong>', ', ', '<br />'); ?>
+                 <strong><?php _e('Cat&eacute;gories','inanis');?>:</strong> <?php the_category(', ') ?>
               </div>
             </div>
           </div> 
@@ -48,8 +48,8 @@ if (!empty($_SERVER['SCRIPT_FILENAME']) && 'single.php' == basename($_SERVER['SC
       </div>
 
       <div class="frt navwrap"><div class="navi">
-        <span class="flt"><?php previous_post('%', '<img style="vertical-align:middle;" src="'.get_bloginfo('template_directory').'/images/arbk.png" alt=" " /> '.__('Previous','inanis').' ', 'no') ?></span>
-        <span class="frt"><?php next_post('%', '<img style="vertical-align:middle;" src="'.get_bloginfo('template_directory').'/images/arfw.png"> '.__('Next','inanis').' ', 'no') ?></span>
+        <span class="flt"><?php previous_post('%', '<img style="vertical-align:middle;" src="'.get_bloginfo('template_directory').'/images/arbk.png" alt=" " /> '.__('Prec&eacute;d&eacute;nte','inanis').' ', 'no') ?></span>
+        <span class="frt"><?php next_post('%', '<img style="vertical-align:middle;" src="'.get_bloginfo('template_directory').'/images/arfw.png"> '.__('Suivant','inanis').' ', 'no') ?></span>
       </div></div><br /><br />
 
       <?php comments_template(); ?>

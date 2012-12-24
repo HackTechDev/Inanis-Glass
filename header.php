@@ -70,7 +70,7 @@ if (!empty($_SERVER['SCRIPT_FILENAME']) && 'header.php' == basename($_SERVER['SC
 </script>
 
 <script src="<?php bloginfo('template_directory'); ?>/js/functions.js" type="text/javascript"></script>
-<script type="text/javascript">var $sboxtext="<?php _e('Start Search','inanis'); ?>";</script>
+<script type="text/javascript">var $sboxtext="<?php _e('Recherche','inanis'); ?>";</script>
 </head>
 <body id="bdy">
 <div class="clear"><!-- Req'd for IE! --></div>

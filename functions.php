@@ -6,7 +6,7 @@ if (!empty($_SERVER['SCRIPT_FILENAME']) && 'functions.php' == basename($_SERVER[
 <?php
 //Custom Header Stuph
 define('HEADER_TEXTCOLOR', '009193');
-define('HEADER_IMAGE', '%s/images/blogphoto666.png'); // %s is theme dir uri
+define('HEADER_IMAGE', '%s/images/blogphoto.png'); // %s is theme dir uri
 define('HEADER_IMAGE_WIDTH', 110);
 define('HEADER_IMAGE_HEIGHT', 110);
 
@@ -139,7 +139,7 @@ function insert_kids(){
           <ul>
            <?php
            if ($baby[$key]){echo $baby[$key];}
-           else {echo ('<br /><br />'.__('No Child Pages.','inanis'));}
+           else {echo ('<br /><br />'.__('Pas de Pages Enfants.','inanis'));}
            ?>
           </ul>
         </div>

@@ -61,8 +61,8 @@ $oddcomment = 'alt';
               <div class="win_infod"></div> 
               <img class="win_infoi" src="<?php bloginfo('template_directory'); ?>/images/feed_50.png" alt="Tags" />
               <div class="win_infoc">
-                 <small><strong><?php _e('Comment Meta','inanis');?>:</strong></small><br />
-                <?php comments_rss_link(__('<abbr title="Really Simple Syndication">RSS</abbr> Feed for comments','inanis')); ?><br />
+                 <small><strong><?php _e('Meta Commentaire','inanis');?> :</strong></small><br />
+                <?php comments_rss_link(__('<abbr title="Really Simple Syndication">RSS</abbr> Feed pour Commentaires','inanis')); ?><br />
                 <?php if ( pings_open() ) : ?> 
                 <a href="<?php trackback_url() ?>" rel="trackback"><?php _e('TrackBack <abbr title="Uniform Resource Identifier">URI</abbr>','inanis'); ?></a> 
                 <?php endif; ?>

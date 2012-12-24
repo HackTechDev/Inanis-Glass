@@ -25,7 +25,7 @@ add_filter('comment_class','comment_add_microid');
 
   <div class="win"> 
     <div class="win_tl"></div><div class="win_t"></div><div class="win_tr"></div><div class="win_bl"></div><div class="win_b"></div><div class="win_br"></div><div class="win_r"></div><div class="win_l"></div>
-    <div class="win_title"><span class="win_tbl">&nbsp;</span><h3><a name="comments"></a><?php _e('Responses to this post','inanis');?> &raquo; (<?php comments_number(__('None','inanis'), __('One Total','inanis'), __('% Total','inanis') );?>)</h3><span class="win_tbr">&nbsp;</span></div>
+    <div class="win_title"><span class="win_tbl">&nbsp;</span><h3><a name="comments"></a><?php _e('Repondre &agrave; cette article','inanis');?> &raquo; (<?php comments_number(__('Aucun','inanis'), __('Un Total','inanis'), __('% Total','inanis') );?>)</h3><span class="win_tbr">&nbsp;</span></div>
     
     <div class="win_ted">
       <div class="win_edt"></div>
@@ -50,14 +50,14 @@ add_filter('comment_class','comment_add_microid');
               	<?php if ('open' == $post->comment_status) :
               		// none
               	else : 
-              		?><p class="nocomments ctr" style="margin:35px 0 35px 0;"><?php _e('Sorry, but comments are closed. Check out another post and speak up!','inanis');?></p><?php
+              		?><p class="nocomments ctr" style="margin:35px 0 35px 0;"><?php _e('Les commnetaires sont ferm&eacute;s','inanis');?></p><?php
               	endif;
               endif;
               if ('open' == $post-> comment_status) : 
               
               // show the form
               ?>
-              <div id="respond"><fieldset><legend><?php comment_form_title(__('Post a Comment','inanis'),__('Post a Reply to %s','inanis')); ?></legend>
+              <div id="respond"><fieldset><legend><?php comment_form_title(__('Poster un Commentaire','inanis'),__('Post a Reply to %s','inanis')); ?></legend>
 
               <div id="cancel-comment-reply">
               	<small><?php cancel_comment_reply_link(); ?></small>
@@ -73,16 +73,16 @@ add_filter('comment_class','comment_add_microid');
               
               <?php if ( $user_ID ) : ?>
               
-              <p><?php _e('Logged in as ','inanis');?> <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>.
+              <p><?php _e('Connect&eacute; en tant que ','inanis');?> <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>.
               <?php
                   $vers = get_bloginfo('version');
                   if ($vers >= "2.7"){
                     /* Logout button for 2.7 and up */ 
-                    $logoutbtn1 = '<a title="'.__('Logout','inanis').'" href="' . wp_logout_url() . '"><span>'.__('Logout','inanis').' &raquo;</span>';
+                    $logoutbtn1 = '<a title="'.__('D&eacute;connexion','inanis').'" href="' . wp_logout_url() . '"><span>'.__('D&eacute;connexion','inanis').' &raquo;</span>';
                   }
                   else {
                     /* Logout Button for Less than 2.7 */
-                    $logoutbtn1 = '<a title="'.__('Logout','inanis').'" href="' . get_option('siteurl') . '/wp-login.php?action=logout"><span>'.__('Logout','inanis').' &raquo;</span>';
+                    $logoutbtn1 = '<a title="'.__('D&eacute;connexion','inanis').'" href="' . get_option('siteurl') . '/wp-login.php?action=logout"><span>'.__('D&eacute;connexion','inanis').' &raquo;</span>';
                   }
                   $logoutbtn2 = '</a>';
               ?>
@@ -93,9 +93,9 @@ add_filter('comment_class','comment_add_microid');
               <p><input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" size="22" tabindex="1" />
               <label for="author"><small><?php _e('Name','inanis'); if ($req) _e('(required)','inanis'); ?></small></label></p>
               <p><input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" />
-              <label for="email"><small><?php _e('Email (will not be published)','inanis'); if ($req) _e('(required)','inanis'); ?></small></label></p>
+              <label for="email"><small><?php _e('Courriel (Ne sera pas publi&eacute;)','inanis'); if ($req) _e('(required)','inanis'); ?></small></label></p>
               <p><input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" tabindex="3" />
-              <label for="url"><small><?php _e('Website','inanis');?></small></label></p>
+              <label for="url"><small><?php _e('Site Personnel','inanis');?></small></label></p>
               
               <?php endif; ?>
               
@@ -103,7 +103,7 @@ add_filter('comment_class','comment_add_microid');
               <?php comment_id_fields(); ?>
               <input type="hidden" name="redirect_to" value="<?php echo htmlspecialchars($_SERVER["REQUEST_URI"]); ?>" /></div>
               
-              <p><small><strong>XHTML:</strong> <?php _e('You can use these tags','inanis');?>: <?php echo allowed_tags(); ?></small></p>
+              <p><small><strong>XHTML:</strong> <?php _e('Vous pouvez utilisez ces balises','inanis');?>: <?php echo allowed_tags(); ?></small></p>
               
               <p><textarea name="comment" id="comment" cols="50%" rows="10" tabindex="4" class="form-textarea"></textarea></p>
               
@@ -111,7 +111,7 @@ add_filter('comment_class','comment_add_microid');
                <p><small><strong><?php _e('Please note: Comment moderation is enabled and may delay your comment. There is no need to resubmit your comment.','inanis');?></strong></small></p>
               <?php } ?>
               
-              <p><input name="submit" type="submit" id="submit" tabindex="5" value="<?php _e('Comment now','inanis');?>" class="form-submit"/></p>
+              <p><input name="submit" type="submit" id="submit" tabindex="5" value="<?php _e('Envoyer Commentaire','inanis');?>" class="form-submit"/></p>
               <?php do_action('comment_form', $post->ID); ?>
               
               </form>
@@ -127,7 +127,7 @@ add_filter('comment_class','comment_add_microid');
           <img class="win_infoi" src="<?php bloginfo('template_directory'); ?>/images/feed_50.png" alt="Tags" />
           <div class="win_infoc">
             <small><strong><?php _e('Comment Meta','inanis');?>:</strong></small><br />
-            <?php comments_rss_link(__('<abbr title="Really Simple Syndication">RSS</abbr> Feed for comments','inanis')); ?><br />
+            <?php comments_rss_link(__('<abbr title="Really Simple Syndication">RSS</abbr> Feed pour Commentaires','inanis')); ?><br />
             <?php if ( pings_open() ) : ?> 
               <a href="<?php trackback_url() ?>" rel="trackback"><?php _e('TrackBack <abbr title="Uniform Resource Identifier">URI</abbr>','inanis'); ?></a> 
             <?php endif; ?>

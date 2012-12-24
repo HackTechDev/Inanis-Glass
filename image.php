@@ -41,10 +41,10 @@ if (!empty($_SERVER['SCRIPT_FILENAME']) && 'image.php' == basename($_SERVER['SCR
             <div class="win_info">
               <div class="win_infot"></div>
               <div class="win_infod">
-                <strong><?php _e('Posted By:','inanis');?></strong> <?php the_author() ?><br />
-                <strong><?php _e('Last Edit:','inanis');?></strong> <?php the_modified_date('d M Y'); ?> @ <?php echo $Post_Modified; ?><br /><br />
-                <a rel="nofollow" href="mailto:?subject=<?php the_title(); ?>&amp;body=<?php _e('I thought you might like this','inanis'); ?>: <?php the_permalink() ?>"><?php _e('Email','inanis');?></a> &bull; 
-                <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e('Permanent Link to','inanis');?> <?php the_title(); ?>"><?php _e('Permalink','inanis') ?></a>
+                <strong><?php _e('Ecrit par :','inanis');?></strong> <?php the_author() ?><br />
+                <strong><?php _e('Derni&grave;re Edition:','inanis');?></strong> <?php the_modified_date('d M Y'); ?> @ <?php echo $Post_Modified; ?><br /><br />
+                <a rel="nofollow" href="mailto:?subject=<?php the_title(); ?>&amp;body=<?php _e('I thought you might like this','inanis'); ?>: <?php the_permalink() ?>"><?php _e('Courriel','inanis');?></a> &bull; 
+                <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e('Lien Permanent vers','inanis');?> <?php the_title(); ?>"><?php _e('Permalien','inanis') ?></a>
               </div> 
               <img class="win_infoi" src="<?php bloginfo('template_directory'); ?>/images/question.png" alt="Tags" />
               <div class="win_infoc"></div>
